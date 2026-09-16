@@ -56,6 +56,12 @@ const player = {
   alive: true,
 };
 
+function clearInputState() {
+  keys.left = false;
+  keys.right = false;
+  keys.jump = false;
+}
+
 function resetLevel() {
   player.x = 40;
   player.y = 420;
@@ -63,6 +69,7 @@ function resetLevel() {
   player.vy = 0;
   player.onGround = false;
   player.alive = true;
+  clearInputState();
 
   level.coins.forEach((coin) => {
     coin.collected = false;
@@ -196,6 +203,7 @@ function loseLife() {
     return;
   }
 
+  clearInputState();
   player.x = 40;
   player.y = 420;
   player.vx = 0;
@@ -322,4 +330,3 @@ window.addEventListener('keyup', (event) => {
 resetLevel();
 updateHud();
 gameLoop();
-
