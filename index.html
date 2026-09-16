@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DK: Jungle Dash</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Arcade Run</p>
+          <h1>DK</h1>
+        </div>
+        <div class="hud">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Lives: <strong id="lives">3</strong></span>
+        </div>
+      </header>
+
+      <canvas id="game" width="960" height="540" aria-label="DK game area"></canvas>
+
+      <div class="controls">
+        <span>Move: A / D or ← / →</span>
+        <span>Jump: W / ↑ / Space</span>
+        <span>Restart: R</span>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
